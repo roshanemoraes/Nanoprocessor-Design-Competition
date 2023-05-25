@@ -6,3 +6,8 @@
 *.xpr
 *.jou
 *.str
+*.wpc
+*.xml
+work/nanoprocessor.cache/wt/project.wpc
+work/nanoprocessor.cache/wt/webtalk_pa.xml
+work/nanoprocessor.cache/wt/project.wpc
