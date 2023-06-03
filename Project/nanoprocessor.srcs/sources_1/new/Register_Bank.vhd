@@ -87,7 +87,7 @@ port map (
 Reg_1 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(1),
 	Q => Reg_out1
 );
@@ -95,7 +95,7 @@ PORT MAP (
 Reg_2 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(2),
 	Q => Reg_out2
 );
@@ -103,7 +103,7 @@ PORT MAP (
 Reg_3 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(3),
 	Q => Reg_out3
 );
@@ -111,7 +111,7 @@ PORT MAP (
 Reg_4 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(4),
 	Q => Reg_out4
 );
@@ -119,7 +119,7 @@ PORT MAP (
 Reg_5 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(5),
 	Q => Reg_out5
 );
@@ -127,7 +127,7 @@ PORT MAP (
 Reg_6 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(6),
 	Q => Reg_out6
 );
@@ -135,7 +135,7 @@ PORT MAP (
 Reg_7 : Reg
 PORT MAP (
 	Clk => Clk,
-	D => Reg_en,
+	D => Reg_in,
 	EN => Decoded_result(7),
 	Q => Reg_out7
 );
