@@ -32,16 +32,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Instruction_Decoder is
-    Port ( ins : in STD_LOGIC_VECTOR (11 downto 0);
-           reg_check : in STD_LOGIC_VECTOR (3 downto 0); -- register check for jump
-           reg_en : out STD_LOGIC_VECTOR (2 downto 0); 
-           load_sel : out STD_LOGIC;
-           im_value : out STD_LOGIC_VECTOR (3 downto 0);
+    Port ( Ins : in STD_LOGIC_VECTOR (11 downto 0);
+           Reg_Check : in STD_LOGIC_VECTOR (3 downto 0); -- register check for jump
+           Reg_En : out STD_LOGIC_VECTOR (2 downto 0); 
+           Load_Sel : out STD_LOGIC;
+           Imd_Value : out STD_LOGIC_VECTOR (3 downto 0);
            Mux_A_sel : out STD_LOGIC_VECTOR (2 downto 0);
            Mux_B_sel : out STD_LOGIC_VECTOR (2 downto 0);
-           sub_sel : out STD_LOGIC;
-           jmp_flag : out STD_LOGIC;
-           jmp_addr : out STD_LOGIC_VECTOR (2 downto 0));
+           Sub_Sel : out STD_LOGIC;
+           Jmp_Flag : out STD_LOGIC;
+           Jmp_Addr : out STD_LOGIC_VECTOR (2 downto 0));
 end Instruction_Decoder;
 
 architecture Behavioral of Instruction_Decoder is
@@ -65,7 +65,7 @@ SIGNAL MUX_B_DISABLED : STD_LOGIC;
 begin
 Decoder_2_to_4_0 : Decoder_2_to_4
 port map(
-    I => ins (11 downto 10),
+    I => Ins (11 downto 10),
     EN => '1',
     Y => DECODER_RESULT);
     
@@ -77,31 +77,31 @@ port map(
     MUX_A_DISABLED <= OP_NEG OR OP_MOVI;  -- A has to be disabled in these instructions
     
     -- Setting register address for Mux A
-    Mux_A_sel(0) <= ins(7) AND NOT MUX_A_DISABLED;
-    Mux_A_sel(1) <= ins(8) AND NOT MUX_A_DISABLED;
-    Mux_A_sel(2) <= ins(9) AND NOT MUX_A_DISABLED;
+    Mux_A_sel(0) <= Ins(7) AND NOT MUX_A_DISABLED;
+    Mux_A_sel(1) <= Ins(8) AND NOT MUX_A_DISABLED;
+    Mux_A_sel(2) <= Ins(9) AND NOT MUX_A_DISABLED;
     
     -- B should get instructions in last bits in these instructions
     
     --1) for NEG    - load (13,12,11) to Mux_B
     --2) for others - load (10,9,8)   to Mux_B
     
-    Mux_B_sel(0) <= ins(4) OR (ins(7) AND OP_NEG);
-    Mux_B_sel(1) <= ins(5) OR (ins(8) AND OP_NEG);
-    Mux_B_sel(2) <= ins(6) OR (ins(9) AND OP_NEG);
+    Mux_B_sel(0) <= Ins(4) OR (Ins(7) AND OP_NEG);
+    Mux_B_sel(1) <= Ins(5) OR (Ins(8) AND OP_NEG);
+    Mux_B_sel(2) <= Ins(6) OR (Ins(9) AND OP_NEG);
     
-    sub_sel <= OP_NEG;
+    Sub_Sel <= OP_NEG;
     
-    reg_en <= ins (9 downto 7);
+    reg_en <= Ins (9 downto 7);
     
-    load_sel <= OP_MOVI; -- Select whether adder output or immediate value is sent to registers
+    Load_Sel <= OP_MOVI; -- Select whether adder output or immediate value is sent to registers
     
-    im_value <= ins (3 downto 0);
+    Imd_Value <= Ins (3 downto 0);
     
-    jmp_flag <= OP_JZR AND (NOT (reg_check(0) OR reg_check(1) OR reg_check(2) OR reg_check(3)));
-    -- jmp_flag <= OP_JZR AND (NOT reg_check(0 to 3));
+    Jmp_Flag <= OP_JZR AND (NOT (Reg_Check(0) OR Reg_Check(1) OR Reg_Check(2) OR Reg_Check(3)));
+    -- Jmp_Flag <= OP_JZR AND (NOT Reg_Check(0 to 3));
     
-    jmp_addr <= ins(2 downto 0);
+    Jmp_Addr <= Ins(2 downto 0);
     
     
 end Behavioral;

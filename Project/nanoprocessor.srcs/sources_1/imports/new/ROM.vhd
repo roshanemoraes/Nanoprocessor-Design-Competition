@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity ROM is
-    Port ( address : in STD_LOGIC_VECTOR (2 downto 0);
-           data : out STD_LOGIC_VECTOR (11 downto 0));
+    Port ( Addr : in STD_LOGIC_VECTOR (2 downto 0);
+           Data : out STD_LOGIC_VECTOR (11 downto 0));
 end ROM;
 
 architecture Behavioral of ROM is
@@ -50,5 +50,5 @@ signal twelveSegment_ROM : rom_type := (
  );
  
 begin
-data <= twelveSegment_ROM(to_integer(unsigned(address)));
+Data <= twelveSegment_ROM(to_integer(unsigned(Addr)));
 end Behavioral;

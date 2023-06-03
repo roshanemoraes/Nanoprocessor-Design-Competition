@@ -40,16 +40,16 @@ architecture Behavioral of TB_Instruction_Decoder is
     -- Component declaration for the Instruction_Decoder module
     component Instruction_Decoder is
         Port ( 
-            ins : in STD_LOGIC_VECTOR (11 downto 0);
-            reg_check : in STD_LOGIC_VECTOR (3 downto 0);
+            Ins : in STD_LOGIC_VECTOR (11 downto 0);
+            Reg_Check : in STD_LOGIC_VECTOR (3 downto 0);
             reg_en : out STD_LOGIC_VECTOR (2 downto 0); 
-            load_sel : out STD_LOGIC;
-            im_value : out STD_LOGIC_VECTOR (3 downto 0);
+            Load_Sel : out STD_LOGIC;
+            Imd_Value : out STD_LOGIC_VECTOR (3 downto 0);
             Mux_A_sel : out STD_LOGIC_VECTOR (2 downto 0);
             Mux_B_sel : out STD_LOGIC_VECTOR (2 downto 0);
-            sub_sel : out STD_LOGIC;
-            jmp_flag : out STD_LOGIC;
-            jmp_addr : out STD_LOGIC_VECTOR (2 downto 0)
+            Sub_Sel : out STD_LOGIC;
+            Jmp_Flag : out STD_LOGIC;
+            Jmp_Addr : out STD_LOGIC_VECTOR (2 downto 0)
         );
     end component;
 
@@ -70,16 +70,16 @@ begin
 
     -- Instantiate the Instruction_Decoder module
     uut: Instruction_Decoder port map (
-        ins => ins_tb,
-        reg_check => reg_check_tb,
+        Ins => ins_tb,
+        Reg_Check => reg_check_tb,
         reg_en => reg_en_tb,
-        load_sel => load_sel_tb,
-        im_value => im_value_tb,
+        Load_Sel => load_sel_tb,
+        Imd_Value => im_value_tb,
         Mux_A_sel => Mux_A_sel_tb,
         Mux_B_sel => Mux_B_sel_tb,
-        sub_sel => sub_sel_tb,
-        jmp_flag => jmp_flag_tb,
-        jmp_addr => jmp_addr_tb
+        Sub_Sel => sub_sel_tb,
+        Jmp_Flag => jmp_flag_tb,
+        Jmp_Addr => jmp_addr_tb
     );
 
     -- Stimulus process
@@ -88,7 +88,7 @@ begin
         -- Test case 1 -- testing JZR 
         ins_tb <= "110010000100";
         reg_check_tb <= "0000";
-        wait for 10ns; -- jmp_flag should be 1, jmp_addr should be 100
+        wait for 10ns; -- Jmp_Flag should be 1, Jmp_Addr should be 100
         reg_check_tb <= "0010";
         wait;
 

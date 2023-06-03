@@ -13,8 +13,8 @@ end Out_controll_7seg;
 architecture Behavioral of Out_controll_7seg is
    
     component LUT_16_7
-        Port ( address : in STD_LOGIC_VECTOR (3 downto 0);
-               data : out STD_LOGIC_VECTOR (6 downto 0));
+        Port ( Addr : in STD_LOGIC_VECTOR (3 downto 0);
+               Data : out STD_LOGIC_VECTOR (6 downto 0));
     end component;
     
     signal S_7seg:std_logic_vector(6 downto 0);
@@ -22,8 +22,8 @@ architecture Behavioral of Out_controll_7seg is
 begin
     LUT_16_7_0:LUT_16_7
             port map(
-                    address=>R7_out,
-                    data=>S_7Seg    ); 
+                    Addr=>R7_out,
+                    Data=>S_7Seg    ); 
                 Anode_out<="1110";
                 Cathode_out<=S_7Seg;   
 

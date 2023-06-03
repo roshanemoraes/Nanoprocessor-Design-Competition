@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity LUT_16_7 is
-    Port ( address : in STD_LOGIC_VECTOR (3 downto 0);
-           data : out STD_LOGIC_VECTOR (6 downto 0));
+    Port ( Addr : in STD_LOGIC_VECTOR (3 downto 0);
+           Data : out STD_LOGIC_VECTOR (6 downto 0));
 end LUT_16_7;
 
 architecture Behavioral of LUT_16_7 is
@@ -60,7 +60,7 @@ type rom_type is array (0 to 15) of std_logic_vector(6 downto 0);
                         );
 begin
 
-data <= sevenSegment_ROM(to_integer(unsigned(address)));
+Data <= sevenSegment_ROM(to_integer(unsigned(Addr)));
 
 end Behavioral;
 

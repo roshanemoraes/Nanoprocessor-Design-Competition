@@ -38,24 +38,24 @@ end TB_ROM_16_17;
 
 architecture Behavioral of TB_ROM_16_17 is
     component ROM
-            Port ( address : in STD_LOGIC_VECTOR (2 downto 0);
-                   data : out STD_LOGIC_VECTOR (11 downto 0));
+            Port ( Addr : in STD_LOGIC_VECTOR (2 downto 0);
+                   Data : out STD_LOGIC_VECTOR (11 downto 0));
     end component;
     
-    signal address: STD_LOGIC_VECTOR (2 downto 0);
-    signal data: STD_LOGIC_VECTOR (11 downto 0);
+    signal Addr: STD_LOGIC_VECTOR (2 downto 0);
+    signal Data: STD_LOGIC_VECTOR (11 downto 0);
 
 begin
     UUT: ROM port map(
-        address => address,
-        data => data
+        Addr => Addr,
+        Data => Data
         );
     
     process begin
     
         -- testing all possible values
         test_loop : for i in 0 to 7 loop
-            address <= std_logic_vector(to_unsigned(i, 3));
+            Addr <= std_logic_vector(to_unsigned(i, 3));
             wait for 100ns;
         end loop test_loop;
         wait;
