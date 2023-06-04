@@ -1,0 +1,393 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun  4 02:11:16 2023
+# Process ID: 23780
+# Current directory: C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.runs/synth_1
+# Command line: vivado.exe -log NanoProcessor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source NanoProcessor.tcl
+# Log file: C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.runs/synth_1/NanoProcessor.vds
+# Journal file: C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source NanoProcessor.tcl -notrace
+Command: synth_design -top NanoProcessor -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27568 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 382.098 ; gain = 96.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'NanoProcessor' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:42]
+INFO: [Synth 8-3491] module 'Slow_Clk' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Slow_Clk.vhd:34' bound to instance 'slow_clock_0' of component 'Slow_Clk' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Slow_Clk.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Slow_Clk.vhd:39]
+INFO: [Synth 8-3491] module 'Register_Bank' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:34' bound to instance 'Register_Bank_0' of component 'Register_Bank' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'Register_Bank' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:34' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (2#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (3#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_0' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (4#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:41]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_1' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:87]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_2' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:95]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_3' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:103]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_4' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:111]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_5' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:119]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_6' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:127]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_7' of component 'Reg' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'Register_Bank' (5#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'TSB_Mux_8_way_4_bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:34' bound to instance 'TSB_Mux_8_way_4_bit_0' of component 'TSB_Mux_8_way_4_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'TSB_Mux_8_way_4_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_3_to_8.vhd:34' bound to instance 'Decode_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:68]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_0' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'TSB_4_Bit' (6#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:40]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_1' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:82]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_2' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:89]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_3' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:96]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_4' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:103]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_5' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:110]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_6' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:117]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_7' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Mux_8_way_4_bit' (7#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:47]
+INFO: [Synth 8-3491] module 'TSB_Mux_8_way_4_bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_Mux_8_way_4_bit.vhd:34' bound to instance 'TSB_Mux_8_way_4_bit_1' of component 'TSB_Mux_8_way_4_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:190]
+INFO: [Synth 8-3491] module 'TSB_Mux_2_way_4_bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_4_bit.vhd:34' bound to instance 'TSB_Mux_2_way_4_bit_0' of component 'TSB_Mux_2_way_4_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'TSB_Mux_2_way_4_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_4_bit.vhd:43]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_0' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_4_bit.vhd:55]
+INFO: [Synth 8-3491] module 'TSB_4_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_4_Bit.vhd:34' bound to instance 'TSB_4_Bit_1' of component 'TSB_4_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_4_bit.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Mux_2_way_4_bit' (8#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_4_bit.vhd:43]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:34' bound to instance 'Instruction_Decoder_0' of component 'Instruction_Decoder' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:47]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (9#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:47]
+INFO: [Synth 8-3491] module 'Add_Sub_4bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:34' bound to instance 'Add_Sub_4bit_0' of component 'Add_Sub_4bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'Add_Sub_4bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:43]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'HA' (10#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'FA' (11#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:43]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:68]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:75]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'Add_Sub_4bit' (12#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/Add_Sub_4bit.vhd:44]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/ROM.vhd:34' bound to instance 'ROM_0' of component 'ROM' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/ROM.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (13#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/ROM.vhd:39]
+INFO: [Synth 8-3491] module 'Program_Counter' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Program_Counter.vhd:34' bound to instance 'Program_Counter_0' of component 'Program_Counter' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:237]
+INFO: [Synth 8-638] synthesizing module 'Program_Counter' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Program_Counter.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Program_Counter' (14#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Program_Counter.vhd:43]
+INFO: [Synth 8-3491] module 'Adder' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:34' bound to instance 'Adder_0' of component 'Adder' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'Adder' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:39]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:53]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:60]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_2' of component 'HA' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (15#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/Adder.vhd:39]
+INFO: [Synth 8-3491] module 'TSB_Mux_2_way_3_bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_3_bit.vhd:34' bound to instance 'TSB_Mux_2_way_3_bit_0' of component 'TSB_Mux_2_way_3_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'TSB_Mux_2_way_3_bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_3_bit.vhd:43]
+INFO: [Synth 8-3491] module 'TSB_3_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_3_Bit.vhd:34' bound to instance 'TSB_3_Bit_0' of component 'TSB_3_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_3_bit.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'TSB_3_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_3_Bit.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'TSB_3_Bit' (16#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_3_Bit.vhd:40]
+INFO: [Synth 8-3491] module 'TSB_3_Bit' declared at 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/imports/new/TSB_3_Bit.vhd:34' bound to instance 'TSB_3_Bit_1' of component 'TSB_3_Bit' [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_3_bit.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Mux_2_way_3_bit' (17#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/TSB_Mux_2_way_3_bit.vhd:43]
+WARNING: [Synth 8-3848] Net r7 in module/entity NanoProcessor does not have driver. [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'NanoProcessor' (18#1) [C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:42]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 437.699 ; gain = 151.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 437.699 ; gain = 151.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 437.699 ; gain = 151.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "twelveSegment_ROM" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 437.699 ; gain = 151.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Slow_Clk 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module Add_Sub_4bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
+Module ROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input     12 Bit        Muxes := 1     
+Module Program_Counter 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "slow_clock_0/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clock_0/clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_0/Q_reg[3]' (FDE) to 'Register_Bank_0/Reg_0/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_0/Q_reg[2]' (FDE) to 'Register_Bank_0/Reg_0/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_0/Q_reg[1]' (FDE) to 'Register_Bank_0/Reg_0/Q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank_0/Reg_0/Q_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (Register_Bank_0/Reg_0/Q_reg[0]) is unused and will be removed from module NanoProcessor.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_1/Q_reg[0]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_2/Q_reg[0]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_3/Q_reg[0]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank_0/Reg_4/Q_reg[0] )
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_1/Q_reg[2]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_2/Q_reg[2]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_3/Q_reg[2]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank_0/Reg_4/Q_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_1/Q_reg[1]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_2/Q_reg[1]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_3/Q_reg[1]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank_0/Reg_4/Q_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_1/Q_reg[3]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_2/Q_reg[3]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank_0/Reg_3/Q_reg[3]' (FDE) to 'Register_Bank_0/Reg_4/Q_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank_0/Reg_4/Q_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (Register_Bank_0/Reg_4/Q_reg[0]) is unused and will be removed from module NanoProcessor.
+WARNING: [Synth 8-3332] Sequential element (Register_Bank_0/Reg_4/Q_reg[2]) is unused and will be removed from module NanoProcessor.
+WARNING: [Synth 8-3332] Sequential element (Register_Bank_0/Reg_4/Q_reg[1]) is unused and will be removed from module NanoProcessor.
+WARNING: [Synth 8-3332] Sequential element (Register_Bank_0/Reg_4/Q_reg[3]) is unused and will be removed from module NanoProcessor.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_0/i_28:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_0/i_29:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_0/i_30:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_0/i_31:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_1/i_60:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_1/i_61:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_1/i_62:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TSB_Mux_8_way_4_bit_1/i_63:a to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT2   |    35|
+|5     |LUT3   |    22|
+|6     |LUT4   |    15|
+|7     |LUT5   |     9|
+|8     |LUT6   |     7|
+|9     |FDRE   |    49|
+|10    |IBUF   |     2|
+|11    |OBUF   |     6|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------+------+
+|      |Instance            |Module          |Cells |
++------+--------------------+----------------+------+
+|1     |top                 |                |   156|
+|2     |  Program_Counter_0 |Program_Counter |    51|
+|3     |  Register_Bank_0   |Register_Bank   |    42|
+|4     |    Reg_5           |Reg             |     4|
+|5     |    Reg_6           |Reg_0           |    34|
+|6     |    Reg_7           |Reg_1           |     4|
+|7     |  slow_clock_0      |Slow_Clk        |    54|
++------+--------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 579.973 ; gain = 294.125
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+115 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 675.199 ; gain = 401.684
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rosha/Desktop/Project/fpga/Project/nanoprocessor.runs/synth_1/NanoProcessor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file NanoProcessor_utilization_synth.rpt -pb NanoProcessor_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 675.199 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  4 02:11:52 2023...
