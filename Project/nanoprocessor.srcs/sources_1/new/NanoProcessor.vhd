@@ -133,7 +133,7 @@ SIGNAL reg_en : STD_LOGIC_VECTOR (2 downto 0); -- Register enable
 SIGNAL data : STD_LOGIC_VECTOR (3 downto 0); -- Register input
 SIGNAL r0, r1, r2, r3, r4, r5, r6, r7 : STD_LOGIC_VECTOR (3 downto 0); -- Register outputs
 
-SIGNAL muxA_sel, muxB_sel : STD_LOGIC_VECTOR (3 downto 0); -- 8-way-4-bit muxes selectors
+SIGNAL muxA_sel, muxB_sel : STD_LOGIC_VECTOR (2 downto 0); -- 8-way-4-bit muxes selectors
 signal yA, yB : STD_LOGIC_VECTOR (3 downto 0); -- Output from 8-way-4-bit muxes
 
 SIGNAL load_sel : STD_LOGIC; -- Load selector from instruction decoder to mux
