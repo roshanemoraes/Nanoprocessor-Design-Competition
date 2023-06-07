@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Reg is
     Port ( Clk : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            En : in STD_LOGIC;
            D : in STD_LOGIC_VECTOR (3 downto 0);
            Q : out STD_LOGIC_VECTOR (3 downto 0) := "0000");
@@ -41,7 +42,18 @@ end Reg;
 architecture Behavioral of Reg is
 
 begin
-
-    Q <= D when (rising_edge(Clk) AND En = '1');
+    
+    -- OLD CODE
+    -- Q <= D when (rising_edge(Clk) AND En = '1');
+    
+    process (Clk,Reset,EN) begin
+       if Reset = '1' then
+           Q <= "0000";
+       elsif (rising_edge(Clk)) then  -- respond when clock rises
+          if EN ='1' then
+               Q <= D;
+          end if;
+       end if;
+    end process;
 
 end Behavioral;

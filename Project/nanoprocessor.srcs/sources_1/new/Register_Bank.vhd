@@ -34,6 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Register_Bank is
     Port ( Reg_en : in STD_LOGIC_VECTOR (2 downto 0);
            Reg_in : in STD_LOGIC_VECTOR (3 downto 0);
+           Reset : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Reg_out0 : out STD_LOGIC_VECTOR (3 downto 0);
            Reg_out1 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -60,6 +61,7 @@ COMPONENT Reg
 PORT (
     Clk : in STD_LOGIC;
     En : in STD_LOGIC;
+    Reset : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR (3 downto 0);
     Q : out STD_LOGIC_VECTOR (3 downto 0) := "0000");
     
@@ -80,6 +82,7 @@ Reg_0 : Reg
 port map (
     Clk => Clk,
     D => "0000", -- Hard-coding R0 to 0000
+    Reset => Reset, 
     EN => Decoded_result(0),
     Q => Reg_out0
 );
@@ -88,6 +91,7 @@ Reg_1 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset, 
 	EN => Decoded_result(1),
 	Q => Reg_out1
 );
@@ -96,6 +100,7 @@ Reg_2 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(2),
 	Q => Reg_out2
 );
@@ -104,6 +109,7 @@ Reg_3 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(3),
 	Q => Reg_out3
 );
@@ -112,6 +118,7 @@ Reg_4 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(4),
 	Q => Reg_out4
 );
@@ -120,6 +127,7 @@ Reg_5 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(5),
 	Q => Reg_out5
 );
@@ -128,6 +136,7 @@ Reg_6 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(6),
 	Q => Reg_out6
 );
@@ -136,6 +145,7 @@ Reg_7 : Reg
 PORT MAP (
 	Clk => Clk,
 	D => Reg_in,
+	Reset => Reset,
 	EN => Decoded_result(7),
 	Q => Reg_out7
 );
