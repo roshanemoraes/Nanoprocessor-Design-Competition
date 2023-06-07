@@ -53,20 +53,26 @@ UUT : Adder
 process begin
         A <= "000";
         wait for 10 ns;
+        
         A <= "001";
         wait for 10 ns;
+        
         A <= "010";
         wait for 10 ns;
+        
         A <= "011";
         wait for 10 ns;
+        
         A <= "100";
         wait for 10 ns;
+        
         A <= "101";
         wait for 10 ns;
+        
         A <= "110";
         wait for 10 ns;
-        A <= "111";
-        wait for 10 ns;
+        
+        A <= "111";       
         wait;
 end process;
 

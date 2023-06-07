@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 04/08/2023 11:55:01 AM
+-- Create Date: 06/07/2023 05:39:17 PM
 -- Design Name: 
--- Module Name: Slow_Clk - Behavioral
+-- Module Name: TB_NanoProcessor_With_7SegOut - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,26 +31,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Slow_Clk is
-    Port ( Clk_in : in STD_LOGIC;
-           Clk_out : out STD_LOGIC);
-end Slow_Clk;
+entity TB_NanoProcessor_With_7SegOut is
+    Port ( Clk : in STD_LOGIC;
+       Reset : in STD_LOGIC;
+       LED_out : out STD_LOGIC_VECTOR (3 downto 0);
+       Overflow : out STD_LOGIC;
+       Zero : out STD_LOGIC;
+       Cathode_7seg : out STD_LOGIC_VECTOR (3 downto 0);
+       Anode_7seg : out STD_LOGIC_VECTOR (6 downto 0));
+       
+end TB_NanoProcessor_With_7SegOut;
 
-architecture Behavioral of Slow_Clk is
-SIGNAL count : integer := 0;
-SIGNAL clk_status : std_logic := '0';
+architecture Behavioral of TB_NanoProcessor_With_7SegOut is
 
 begin
-    -- For 100 MHz input clock this generates a 1Hz pulse
-    -- For 100 MHz input clock (i.e. sim file has 5ns), this will slow down to 10MHz
-    process (Clk_in) begin
-        if (rising_edge(Clk_in)) then
-            count <= count + 1;
-            if (count = 5) then
-                clk_status <= not clk_status;
-                Clk_out <= clk_status;
-                count <= 0;
-            end if;
-        end if;
-    end process;
+
+
 end Behavioral;

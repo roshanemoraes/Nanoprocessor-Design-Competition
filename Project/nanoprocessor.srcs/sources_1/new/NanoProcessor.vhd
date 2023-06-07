@@ -50,6 +50,7 @@ COMPONENT Register_Bank
     Port ( Reg_en : in STD_LOGIC_VECTOR (2 downto 0);
        Reg_in : in STD_LOGIC_VECTOR (3 downto 0);
        Clk : in STD_LOGIC;
+       Reset : in STD_LOGIC;
        Reg_out0 : out STD_LOGIC_VECTOR (3 downto 0);
        Reg_out1 : out STD_LOGIC_VECTOR (3 downto 0);
        Reg_out2 : out STD_LOGIC_VECTOR (3 downto 0);
@@ -164,6 +165,7 @@ Register_Bank_0: Register_Bank
     port map (
         Clk => slow_clock,
         Reg_En => reg_en,
+        Reset => Reset,
         Reg_in => data,
         Reg_out0 => r0,
         Reg_out1 => r1,
