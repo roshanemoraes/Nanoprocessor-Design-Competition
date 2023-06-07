@@ -38,62 +38,66 @@ end TB_Register_Bank;
 architecture Behavioral of TB_Register_Bank is
 
 component Register_Bank
-port (data : in STD_LOGIC_VECTOR (3 downto 0);
-       clk : in STD_LOGIC;
-       en : in STD_LOGIC_VECTOR (2 downto 0);
-       r0 : out STD_LOGIC_VECTOR (3 downto 0);
-       r1 : out STD_LOGIC_VECTOR (3 downto 0);
-       r2 : out STD_LOGIC_VECTOR (3 downto 0);
-       r3 : out STD_LOGIC_VECTOR (3 downto 0);
-       r4 : out STD_LOGIC_VECTOR (3 downto 0);
-       r5 : out STD_LOGIC_VECTOR (3 downto 0);
-       r6 : out STD_LOGIC_VECTOR (3 downto 0);
-       r7 : out STD_LOGIC_VECTOR (3 downto 0));
+Port ( Reg_en : in STD_LOGIC_VECTOR (2 downto 0);
+       Reg_in : in STD_LOGIC_VECTOR (3 downto 0);
+       Clk : in STD_LOGIC;
+       Reg_out0 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out1 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out2 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out3 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out4 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out5 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out6 : out STD_LOGIC_VECTOR (3 downto 0);
+       Reg_out7 : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
-signal data : STD_LOGIC_VECTOR (3 downto 0);
-signal r0, r1, r2, r3, r4, r5, r6, r7 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-signal clk : STD_LOGIC := '0';
-signal en : STD_LOGIC_VECTOR (2 downto 0);
+signal Reg_in : STD_LOGIC_VECTOR (3 downto 0);
+signal Reg_out0, Reg_out1, Reg_out2, Reg_out3, Reg_out4, Reg_out5, Reg_out6, Reg_out7 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+signal Clk : STD_LOGIC := '0';
+signal Reg_en : STD_LOGIC_VECTOR (2 downto 0);
 
 begin
 uut: Register_bank
         Port map (
-        data=>data,
-        clk=>clk, 
-        en=>en, 
-        r0=>r0, 
-        r1=>r1, 
-        r2=>r2, 
-        r3=>r3, 
-        r4=>r4, 
-        r5=>r5,
-        r6=>r6, 
-        r7=>r7);
+        Reg_in => Reg_in, -- data
+        Clk => Clk, 
+        Reg_en => Reg_en, 
+        Reg_out0 => Reg_out0,
+        Reg_out1 => Reg_out1,
+        Reg_out2 => Reg_out2,
+        Reg_out3 => Reg_out3,
+        Reg_out4 => Reg_out4,
+        Reg_out5 => Reg_out5,
+        Reg_out6 => Reg_out6,
+        Reg_out7 => Reg_out7);
         
 process
 begin  
     wait for 5ns;
-    clk <= NOT clk;    
+    Clk <= NOT Clk;    
 end process;
 
 process
 begin  
-    data <= "1011";
+
+    Reg_in <= "0011"; -- From 210161F (11 0011 0100 1111 0001)
     
-    --Index no:- 210390F
+    -- Registers enabled according to index no:- 210390F
     --In binary:- 110 011 010 111 010 110
     
-    en <= "110";
-    wait for 20ns; -- 
+    Reg_en <= "110";
+    wait for 10ns; -- R6
     
-    en <= "010";
-    wait for 20ns;
+    Reg_en <= "010";
+    wait for 10ns; -- R2
     
-    en <= "111";
-    wait for 20ns;
+    Reg_en <= "111";
+    wait for 10ns; -- R7
     
-    en <= "011";
+    Reg_en <= "000";
+    wait for 10ns; -- R0 -- Should not be written
+    
+    Reg_en <= "011"; -- R3
     wait;
     
 end process;
