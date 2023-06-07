@@ -60,47 +60,47 @@ process
             SubSel<='0';    --add
             A<="0111"; --7
             B<="1000"; --(-8)
-            wait for 100ns;
+            wait for 100ns; -- Output should be 1111
             
             A<="1000"; --(-8)
             B<="0010"; --2
-            wait for 100ns;
+            wait for 100ns; -- Output should be 1010
             
             SubSel<='1';    -- Sub
             A<="1010"; --(-6)
             B<="1010"; --(-6)
-            wait for 100ns;
+            wait for 100ns; -- Output should be 0000
             
             A<="0111"; --7
             B<="0111"; --7
-            wait for 100ns;
+            wait for 100ns; -- Output should be 0000
         
             SubSel<='0';
-            A<="1000"; --(-8)
-            B<="1000"; --(-8)
-            wait for 100ns;
+            A<="1001"; --(-7)
+            B<="1001"; --(-7)
+            wait for 100ns; -- Output should be 0010 with overflow -- ???
         
             A<="1111"; --(-1)
             B<="0001"; --1
-            wait for 100ns;
+            wait for 100ns; -- Output should be 0000 without overflow
         
             A<="0000"; --0
             B<="1100"; --(-4)
-            wait for 100ns;
+            wait for 100ns; -- Output should be 1100
          
             SubSel<='1';
             A<="1010"; --(-6)
             B<="1100"; --(-4)
-            wait for 100ns; 
+            wait for 100ns; -- Output should be 1110
             
             A<="0001"; --1
-            B<="1001"; --(-7)
-            wait for 100ns;   
+            B<="1010"; --(-6)
+            wait for 100ns;  -- Output should be 0111 without overflow
             
             SubSel<='0';
             A<="0001"; --1
-            B<="0111"; --7
-            wait for 100ns;
+            B<="0101"; --5
+            wait for 100ns; -- -- Output should be 0110 without overflow
         end process;
 
 
