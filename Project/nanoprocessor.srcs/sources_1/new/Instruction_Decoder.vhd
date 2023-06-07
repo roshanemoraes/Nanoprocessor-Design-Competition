@@ -92,7 +92,7 @@ port map(
     
     Sub_Sel <= OP_NEG;
     
-    reg_en <= Ins (9 downto 7);
+    reg_en <= Ins (9 downto 7) AND NOT(OP_JZR, OP_JZR, OP_JZR);
     
     Load_Sel <= OP_MOVI; -- Select whether adder output or immediate value is sent to registers
     

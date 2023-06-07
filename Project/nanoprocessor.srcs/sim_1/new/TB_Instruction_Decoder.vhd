@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 05/31/2023 03:33:34 PM
+-- Create Date: 07/09/2022 09:51:21 PM
 -- Design Name: 
 -- Module Name: TB_Instruction_Decoder - Behavioral
 -- Project Name: 
@@ -36,83 +36,75 @@ entity TB_Instruction_Decoder is
 end TB_Instruction_Decoder;
 
 architecture Behavioral of TB_Instruction_Decoder is
+component Instruction_Decoder
+    Port ( Ins : in STD_LOGIC_VECTOR (11 downto 0);
+           Reg_Check : in STD_LOGIC_VECTOR (3 downto 0);
+           Reg_En : out STD_LOGIC_VECTOR(2 downto 0);
+           Load_Sel : out STD_LOGIC;
+           Imd_Value : out STD_LOGIC_VECTOR(3 downto 0);
+           Mux_A_sel : out STD_LOGIC_VECTOR (2 downto 0);
+           Mux_B_Sel : out STD_LOGIC_VECTOR (2 downto 0);
+           Sub_Sel : out STD_LOGIC;
+           Jmp_Flag : out STD_LOGIC;
+           Jmp_Addr : out STD_LOGIC_VECTOR (2 downto 0));
+end component;
 
-    -- Component declaration for the Instruction_Decoder module
-    component Instruction_Decoder is
-        Port ( 
-            Ins : in STD_LOGIC_VECTOR (11 downto 0);
-            Reg_Check : in STD_LOGIC_VECTOR (3 downto 0);
-            reg_en : out STD_LOGIC_VECTOR (2 downto 0); 
-            Load_Sel : out STD_LOGIC;
-            Imd_Value : out STD_LOGIC_VECTOR (3 downto 0);
-            Mux_A_sel : out STD_LOGIC_VECTOR (2 downto 0);
-            Mux_B_sel : out STD_LOGIC_VECTOR (2 downto 0);
-            Sub_Sel : out STD_LOGIC;
-            Jmp_Flag : out STD_LOGIC;
-            Jmp_Addr : out STD_LOGIC_VECTOR (2 downto 0)
-        );
-    end component;
-
-    -- Signal declarations
-    signal ins_tb : STD_LOGIC_VECTOR (11 downto 0);
-    signal reg_check_tb : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-    signal reg_en_tb : STD_LOGIC_VECTOR (2 downto 0);
-    signal load_sel_tb : STD_LOGIC;
-    signal im_value_tb : STD_LOGIC_VECTOR (3 downto 0);
-    signal Mux_A_sel_tb : STD_LOGIC_VECTOR (2 downto 0);
-    signal Mux_B_sel_tb : STD_LOGIC_VECTOR (2 downto 0);
-    signal sub_sel_tb : STD_LOGIC;
-    signal jmp_flag_tb : STD_LOGIC;
-    signal jmp_addr_tb : STD_LOGIC_VECTOR (2 downto 0);
-   
+signal Load_Sel,Sub_Sel,Jmp_Flag : std_logic;
+signal Reg_Check,Imd_Value : STD_LOGIC_VECTOR(3 downto 0);
+signal Reg_En, Mux_A_Sel, Mux_B_Sel, Jmp_Addr : STD_LOGIC_VECTOR (2 downto 0);
+signal Ins : STD_LOGIC_VECTOR (11 downto 0);
 
 begin
+UUT : Instruction_Decoder
+        port map (
+                   Ins => Ins,
+                   Reg_Check => Reg_Check,
+                   Reg_En => Reg_En,
+                   Load_Sel => Load_Sel,
+                   Imd_Value => Imd_Value,
+                   Mux_A_Sel => Mux_A_Sel,
+                   Mux_B_Sel => Mux_B_Sel,
+                   Sub_Sel => Sub_Sel,
+                   Jmp_Flag => Jmp_Flag,
+                   Jmp_Addr => Jmp_Addr
+        );
+        
 
-    -- Instantiate the Instruction_Decoder module
-    uut: Instruction_Decoder port map (
-        Ins => ins_tb,
-        Reg_Check => reg_check_tb,
-        reg_en => reg_en_tb,
-        Load_Sel => load_sel_tb,
-        Imd_Value => im_value_tb,
-        Mux_A_sel => Mux_A_sel_tb,
-        Mux_B_sel => Mux_B_sel_tb,
-        Sub_Sel => sub_sel_tb,
-        Jmp_Flag => jmp_flag_tb,
-        Jmp_Addr => jmp_addr_tb
-    );
+process 
+begin
+ Ins <= "100010001110"; -- MOVI 001 <- 1110 
+ wait for 10ns; -- Reg_En <- 001, Load_Sel <- 1, Imd_Value <- 1110
+ 
+ Ins <= "100100000101"; -- MOVI 010 <- 0101
+ wait for 10ns; -- Reg_En <- 010, Load_Sel <- 1, Imd_Value <- 0101
+ 
+ Ins <= "100110001110"; -- MOVI 011 <- 1110
+ wait for 10ns; -- Reg_En <- 011, Load_Sel <- 1, Imd_Value <- 1110 
+ 
+ Ins <= "010110000000"; -- NEG  011 <- 0000
+ wait for 10ns; -- Sub_Sel <- 1, Mux_B_Sel <- 011, Mux_A_Sel <- 000
+ -- Reg_En <- 011
+ 
+ Reg_Check <= "0000";
+ 
+ Ins <= "000010110000"; -- ADD 001 <- [011] + [001]
+ wait for 10ns; -- Sub_Sel <- 0, Mux_B_Sel <- 011, Mux_A_Sel <- 001
+ -- Reg_En <- 001
+ -- Load_Sel <- 0
+ 
+ Ins <= "110010000010"; --JZR 001 <- ( 001 != then jumpTo 010 )  
+ wait for 10ns; -- Sub_Sel <- 0, Mux_B_Sel <- 000, Mux_A_Sel <- 001
+ -- Load_Sel <- 0
+ -- Jmp_Addr <- 010
+ -- Jmp_Flag <- 1
+ -- Reg_En <- 000 "Okay" -- will be 000 for JZR
 
-    -- Stimulus process
-    stimulus: process
-    begin
-        -- Test case 1 -- testing JZR 
-        ins_tb <= "110010000100";
-        reg_check_tb <= "0000";
-        wait for 10ns; -- Jmp_Flag should be 1, Jmp_Addr should be 100
-        reg_check_tb <= "0010";
-        wait;
-
-        -- Test case 2
---        ins_tb <= "000000000010";
---        reg_check_tb <= "0001";
---        wait for 10 ns;
-
---        -- Test case 3
---        ins_tb <= "000000000011";
---        reg_check_tb <= "0010";
---        wait for 10 ns;
-
---        -- Add more test cases as needed
-
-        wait;
-    end process;
-
-    -- Assertion process (optional)
-    assertion_process: process
-    begin
-        -- Add assertions to verify the output signals if needed
-
-        wait;
-    end process;
-
+ Ins <= "010100000000"; -- NEG  010 <- 0000
+ wait for 10ns; -- Sub_Sel <- 1, Mux_B_Sel <- 010, Mux_A_Sel <- 000
+ -- Reg_En <- 010
+ -- Load_Sel <- 0
+ wait;
+ 
+ 
+end process;
 end Behavioral;
