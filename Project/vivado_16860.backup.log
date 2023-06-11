@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 19:40:14 2023
+# Process ID: 16860
+# Current directory: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Users\DELL\Xilinx projects\Optimized NanoProcessor-v1.1\Optimized NanoProcessor\Optimized_NanoProcessor.xpr
+# Log file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/vivado.log
+# Journal file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_NanoProcessor' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TB_NanoProcessor_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sim_1/new/TB_NanoProcessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_NanoProcessor
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 39c1c893c81343568c71f1227660fa8e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_NanoProcessor_behav xil_defaultlib.TB_NanoProcessor -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clock [slow_clock_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8_to_1 [mux_8_to_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_8_to_1_4 [mux_8_to_1_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_4bit [add_sub_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_way_4_bit [mux_2_way_4_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_way_3_bit [mux_2_way_3_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Adder_3_bit [adder_3_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.Program_Counter [program_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral_tb of entity xil_defaultlib.tb_nanoprocessor
+Built simulation snapshot TB_NanoProcessor_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TB_NanoProcessor_behav -key {Behavioral:sim_1:Functional:TB_NanoProcessor} -tclbatch {TB_NanoProcessor.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source TB_NanoProcessor.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_NanoProcessor_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 899.719 ; gain = 16.758
+run 10 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_NanoProcessor' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TB_NanoProcessor_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sim_1/new/TB_NanoProcessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_NanoProcessor
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 39c1c893c81343568c71f1227660fa8e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_NanoProcessor_behav xil_defaultlib.TB_NanoProcessor -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clock [slow_clock_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8_to_1 [mux_8_to_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX_8_to_1_4 [mux_8_to_1_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_4bit [add_sub_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_way_4_bit [mux_2_way_4_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_way_3_bit [mux_2_way_3_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Adder_3_bit [adder_3_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.Program_Counter [program_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral_tb of entity xil_defaultlib.tb_nanoprocessor
+Built simulation snapshot TB_NanoProcessor_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TB_NanoProcessor_behav -key {Behavioral:sim_1:Functional:TB_NanoProcessor} -tclbatch {TB_NanoProcessor.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source TB_NanoProcessor.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_NanoProcessor_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 912.945 ; gain = 0.000
+run 1000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 11 19:58:32 2023...

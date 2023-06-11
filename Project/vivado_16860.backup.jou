@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 19:40:14 2023
+# Process ID: 16860
+# Current directory: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Users\DELL\Xilinx projects\Optimized NanoProcessor-v1.1\Optimized NanoProcessor\Optimized_NanoProcessor.xpr
+# Log file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/vivado.log
+# Journal file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source TB_NanoProcessor.tcl
+run 10 ms
+close_sim
+launch_simulation
+source TB_NanoProcessor.tcl
+run 1000 ns
+close_sim

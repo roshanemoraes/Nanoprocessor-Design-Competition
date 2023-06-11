@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 18:22:43 2023
+# Process ID: 8880
+# Current directory: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23368 C:\Users\DELL\Xilinx projects\Optimized NanoProcessor-v1.1\Optimized NanoProcessor\Optimized_NanoProcessor.xpr
+# Log file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/vivado.log
+# Journal file: C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.1/Optimized NanoProcessor/Optimized_NanoProcessor.xpr}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_NanoProcessor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source TB_NanoProcessor.tcl
+run all
+run all
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 ms
+close_sim

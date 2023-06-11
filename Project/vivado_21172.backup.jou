@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 08:50:07 2023
+# Process ID: 21172
+# Current directory: C:/Users/rosha/Desktop/Optimized NanoProcessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26468 C:\Users\rosha\Desktop\Optimized NanoProcessor\Optimized_NanoProcessor.xpr
+# Log file: C:/Users/rosha/Desktop/Optimized NanoProcessor/vivado.log
+# Journal file: C:/Users/rosha/Desktop/Optimized NanoProcessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/rosha/Desktop/Optimized NanoProcessor/Optimized_NanoProcessor.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1

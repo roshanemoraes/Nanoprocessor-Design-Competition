@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 21:59:19 2023
+# Process ID: 21232
+# Current directory: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/impl_1
+# Command line: vivado.exe -log NanoProcessor_With_7SegOut.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source NanoProcessor_With_7SegOut.tcl -notrace
+# Log file: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/impl_1/NanoProcessor_With_7SegOut.vdi
+# Journal file: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source NanoProcessor_With_7SegOut.tcl -notrace

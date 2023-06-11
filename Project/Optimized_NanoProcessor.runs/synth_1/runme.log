@@ -1,0 +1,462 @@
+
+*** Running vivado
+    with args -log NanoProcessor_With_7SegOut.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source NanoProcessor_With_7SegOut.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source NanoProcessor_With_7SegOut.tcl -notrace
+Command: synth_design -top NanoProcessor_With_7SegOut -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15996 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 381.680 ; gain = 97.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'NanoProcessor_With_7SegOut' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor_With_7SegOut.vhd:36]
+INFO: [Synth 8-3491] module 'NanoProcessor' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:26' bound to instance 'NanoProcessor_0' of component 'NanoProcessor' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor_With_7SegOut.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'NanoProcessor' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:36]
+INFO: [Synth 8-3491] module 'Slow_Clock' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Slow_Clock.vhd:26' bound to instance 'Slow_Clock_0' of component 'Slow_Clock' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clock' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Slow_Clock.vhd:31]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Slow_Clock.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clock' (1#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Slow_Clock.vhd:31]
+INFO: [Synth 8-3491] module 'Register_Bank' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:16' bound to instance 'Register_Bank_0' of component 'Register_Bank' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'Register_Bank' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:31]
+WARNING: [Synth 8-5640] Port 'en' is missing in component declaration [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:41]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Decoder_3_to_8.vhd:26' bound to instance 'Decoder_3_to_8_0' of component 'decoder_3_to_8' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Decoder_3_to_8.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (2#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Decoder_3_to_8.vhd:32]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_0' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (3#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:25]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_1' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:66]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_2' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:74]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_3' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:82]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_4' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:90]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_5' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:98]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_6' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:106]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reg.vhd:17' bound to instance 'Reg_7' of component 'reg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:114]
+INFO: [Synth 8-256] done synthesizing module 'Register_Bank' (4#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Register_Bank.vhd:31]
+INFO: [Synth 8-3491] module 'MUX_8_to_1_4' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:17' bound to instance 'MUX_8_to_1_4_0' of component 'MUX_8_to_1_4' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'MUX_8_to_1_4' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:30]
+INFO: [Synth 8-3491] module 'Mux_8_to_1' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:26' bound to instance 'MUX_0' of component 'MUX_8_to_1' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'Mux_8_to_1' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:32]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Decoder_3_to_8.vhd:26' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Mux_8_to_1' (5#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:32]
+INFO: [Synth 8-3491] module 'Mux_8_to_1' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:26' bound to instance 'MUX_1' of component 'MUX_8_to_1' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:54]
+INFO: [Synth 8-3491] module 'Mux_8_to_1' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:26' bound to instance 'MUX_2' of component 'MUX_8_to_1' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:67]
+INFO: [Synth 8-3491] module 'Mux_8_to_1' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_8_to_1.vhd:26' bound to instance 'MUX_3' of component 'MUX_8_to_1' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'MUX_8_to_1_4' (6#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:30]
+INFO: [Synth 8-3491] module 'MUX_8_to_1_4' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/MUX_8_to_1_4.vhd:17' bound to instance 'MUX_8_to_1_4_1' of component 'MUX_8_to_1_4' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:185]
+INFO: [Synth 8-3491] module 'Add_Sub_4bit' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:17' bound to instance 'Add_Sub_4_bit_0' of component 'Add_Sub_4bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'Add_Sub_4bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:27]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_0' of component 'FA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:35]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_0' of component 'HA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/HA.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'HA' (7#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/HA.vhd:34]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_1' of component 'HA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'FA' (8#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:35]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_1' of component 'FA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:56]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_2' of component 'FA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_3' of component 'FA' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'Add_Sub_4bit' (9#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Add_Sub_4bit.vhd:27]
+INFO: [Synth 8-3491] module 'Mux_2_way_4_bit' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_4_bit.vhd:17' bound to instance 'Mux_2_way_4_bit_0' of component 'Mux_2_way_4_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'Mux_2_way_4_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_4_bit.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2_way_4_bit' (10#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_4_bit.vhd:24]
+INFO: [Synth 8-3491] module 'Mux_2_way_3_bit' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_3_bit.vhd:17' bound to instance 'Mux_2_way_3_bit_0' of component 'Mux_2_way_3_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:214]
+INFO: [Synth 8-638] synthesizing module 'Mux_2_way_3_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_3_bit.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2_way_3_bit' (11#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Mux_2_way_3_bit.vhd:24]
+INFO: [Synth 8-3491] module 'Adder_3_bit' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adder_3_bit.vhd:19' bound to instance 'Adder_3_bit_0' of component 'Adder_3_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'Adder_3_bit' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adder_3_bit.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Adder_3_bit' (12#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adder_3_bit.vhd:24]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Instruction_Decoder.vhd:17' bound to instance 'Instruction_Decoder_0' of component 'Instruction_Decoder' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Instruction_Decoder.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (13#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Instruction_Decoder.vhd:31]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/ROM.vhd:19' bound to instance 'ROM_0' of component 'ROM' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/ROM.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (14#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/ROM.vhd:24]
+INFO: [Synth 8-3491] module 'Program_Counter' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Program_Counter.vhd:17' bound to instance 'Program_Counter_0' of component 'Program_Counter' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'Program_Counter' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Program_Counter.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Program_Counter' (15#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Program_Counter.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'NanoProcessor' (16#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor.vhd:36]
+INFO: [Synth 8-3491] module 'Reset_Module' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reset_Module.vhd:17' bound to instance 'Reset_Module_0' of component 'Reset_Module' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor_With_7SegOut.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'Reset_Module' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reset_Module.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'Reset_Module' (17#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Reset_Module.vhd:23]
+INFO: [Synth 8-3491] module 'Adapter_7seg' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adapter_7seg.vhd:18' bound to instance 'Adapter_7seg_0' of component 'Adapter_7seg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor_With_7SegOut.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'Adapter_7seg' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adapter_7seg.vhd:24]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/LUT_16_7.vhd:26' bound to instance 'LUT_16_7_0' of component 'LUT_16_7' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adapter_7seg.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/LUT_16_7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (18#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/LUT_16_7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'Adapter_7seg' (19#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/Adapter_7seg.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'NanoProcessor_With_7SegOut' (20#1) [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/sources_1/new/NanoProcessor_With_7SegOut.vhd:36]
+WARNING: [Synth 8-3331] design Decoder_3_to_8 has unconnected port EN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 437.637 ; gain = 153.195
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 437.637 ; gain = 153.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 437.637 ; gain = 153.195
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/constrs_1/imports/Desktop/Basys3Labs.xdc]
+Finished Parsing XDC File [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/constrs_1/imports/Desktop/Basys3Labs.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.srcs/constrs_1/imports/Desktop/Basys3Labs.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/NanoProcessor_With_7SegOut_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/NanoProcessor_With_7SegOut_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 769.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 769.453 ; gain = 485.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 769.453 ; gain = 485.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 769.453 ; gain = 485.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "load_sel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "twelveSegment_ROM" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sevenSegment_ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 769.453 ; gain = 485.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 13    
++---Registers : 
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   9 Input     12 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 9     
+	  17 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Decoder_3_to_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module Reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module Add_Sub_4bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
+Module Mux_2_way_4_bit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module Mux_2_way_3_bit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+Module Adder_3_bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+Module Instruction_Decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module ROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input     12 Bit        Muxes := 1     
+Module Program_Counter 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module Reset_Module 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module LUT_16_7 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP NanoProcessor_0/Slow_Clock_0/clk_divider_reg, operation Mode is: (P+1)'.
+DSP Report: register NanoProcessor_0/Slow_Clock_0/clk_divider_reg is absorbed into DSP NanoProcessor_0/Slow_Clock_0/clk_divider_reg.
+DSP Report: operator NanoProcessor_0/Slow_Clock_0/plusOp is absorbed into DSP NanoProcessor_0/Slow_Clock_0/clk_divider_reg.
+WARNING: [Synth 8-3917] design NanoProcessor_With_7SegOut has port Anode_7seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design NanoProcessor_With_7SegOut has port Anode_7seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design NanoProcessor_With_7SegOut has port Anode_7seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design NanoProcessor_With_7SegOut has port Anode_7seg[0] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[3]' (FDCE) to 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[2]' (FDCE) to 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[1]' (FDCE) to 'NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_0/Q_reg[0]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 769.453 ; gain = 485.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Slow_Clock  | (P+1)'      | -      | -      | -      | -      | 26     | -    | -    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 801.914 ; gain = 517.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 802.195 ; gain = 517.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_3/Q_reg[3]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_3/Q_reg[2]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_3/Q_reg[1]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_3/Q_reg[0]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_4/Q_reg[3]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_4/Q_reg[2]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_4/Q_reg[1]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_4/Q_reg[0]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_5/Q_reg[3]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_5/Q_reg[2]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_5/Q_reg[1]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_5/Q_reg[0]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_6/Q_reg[3]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_6/Q_reg[2]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_6/Q_reg[1]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+WARNING: [Synth 8-3332] Sequential element (NanoProcessor_0/Register_Bank_0/Reg_6/Q_reg[0]) is unused and will be removed from module NanoProcessor_With_7SegOut.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |DSP48E1 |     1|
+|3     |LUT2    |     3|
+|4     |LUT3    |     7|
+|5     |LUT4    |     8|
+|6     |LUT5    |    14|
+|7     |LUT6    |     4|
+|8     |FDCE    |    12|
+|9     |FDRE    |     5|
+|10    |IBUF    |     2|
+|11    |OBUF    |    17|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------+------+
+|      |Instance              |Module          |Cells |
++------+----------------------+----------------+------+
+|1     |top                   |                |    74|
+|2     |  NanoProcessor_0     |NanoProcessor   |    50|
+|3     |    Program_Counter_0 |Program_Counter |    30|
+|4     |    Register_Bank_0   |Register_Bank   |    19|
+|5     |      Reg_1           |Reg             |     4|
+|6     |      Reg_2           |Reg_0           |     4|
+|7     |      Reg_7           |Reg_1           |    11|
+|8     |    Slow_Clock_0      |Slow_Clock      |     1|
+|9     |  Reset_Module_0      |Reset_Module    |     4|
++------+----------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 826.438 ; gain = 210.180
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 826.438 ; gain = 541.996
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 826.438 ; gain = 554.250
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/synth_1/NanoProcessor_With_7SegOut.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file NanoProcessor_With_7SegOut_utilization_synth.rpt -pb NanoProcessor_With_7SegOut_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 826.438 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 11 21:58:49 2023...

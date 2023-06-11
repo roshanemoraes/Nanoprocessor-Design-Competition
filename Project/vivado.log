@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 21:55:52 2023
+# Process ID: 15772
+# Current directory: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12656 C:\Users\rosha\Desktop\Optimized NanoProcessor-v1.2\Optimized NanoProcessor\Optimized NanoProcessor\Optimized_NanoProcessor.xpr
+# Log file: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/vivado.log
+# Journal file: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor'
+INFO: [Project 1-313] Project file moved from 'C:/Users/DELL/Xilinx projects/Optimized NanoProcessor-v1.2/Optimized NanoProcessor' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 979.719 ; gain = 153.148
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sun Jun 11 21:58:14 2023] Launched synth_1...
+Run output will be captured here: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Sun Jun 11 21:59:11 2023] Launched impl_1...
+Run output will be captured here: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sun Jun 11 22:00:14 2023] Launched impl_1...
+Run output will be captured here: C:/Users/rosha/Desktop/Optimized NanoProcessor-v1.2/Optimized NanoProcessor/Optimized NanoProcessor/Optimized_NanoProcessor.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 11 22:01:22 2023...
