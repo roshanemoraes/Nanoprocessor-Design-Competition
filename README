@@ -3,7 +3,7 @@
 
 ## Description
 
-![ddd!](img/schematic.png)
+![ddd!](./img/schematic.png)
 
 A simplified nanoprocessor designed to run on the Basys3 FPGA. Desgined using Xlinx Vivado with VHD. The NanoProcessor is designed using Registers, Add/Sub Unit, Decoders, Multiplexers which have been implemented seperately.
 
