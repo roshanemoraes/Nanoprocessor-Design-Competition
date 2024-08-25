@@ -25,7 +25,7 @@ Clone the project using git.
 
 Open the project in Xlinx Vivado and upload the `NanoProcessor.bit` file to the FPGA.
 
-Entry point to the code is [here](./Nano%20Processor/Nano%20Processor.srcs/sources_1/new/NanoProcessor.vhd)
+Entry point to the code is [here](./work/nanoprocessor.srcs/sources_1/new/Program_Counter.vhd)
 
 ## Usage
 
